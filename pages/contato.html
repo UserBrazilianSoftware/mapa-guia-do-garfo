@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contato - SaborLocal. Entre em contato conosco para dúvidas, sugestões ou parcerias. Formulário de contato e informações.">
+    <meta name="keywords" content="contato, suporte, dúvidas, sugestões, parcerias, formulário">
+    <meta name="author" content="SaborLocal">
+    <title>Contato - Guia do Garfo</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="../index.html" class="nav-logo">
+                    🍽️ Guia do Garfo
+                </a>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="explorar.html" class="nav-link">Explorar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="avaliacoes.html" class="nav-link">Minhas Avaliações</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contato.html" class="nav-link active">Contato</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">Entre em Contato</h1>
+                <p class="page-subtitle">Estamos aqui para ajudar você a descobrir os melhores sabores</p>
+            </div>
+        </section>
+
+        <!-- Conteúdo Principal -->
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Informações de Contato -->
+                    <div class="contact-info">
+                        <h2 class="contact-title">Fale Conosco</h2>
+                        <p class="contact-description">
+                            Tem alguma dúvida, sugestão ou feedback? Adoraríamos ouvir você! 
+                            Nossa equipe está sempre pronta para ajudar e melhorar sua 
+                            experiência no SaborLocal.
+                        </p>
+
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon">📧</div>
+                                <div class="contact-details">
+                                    <h3 class="contact-method-title">Email</h3>
+                                    <p class="contact-method-info">estudoengsofware@gmail.com</p>
+                                    <p class="contact-method-note">Respondemos em até 24 horas</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon">📱</div>
+                                <div class="contact-details">
+                                    <h3 class="contact-method-title">Telefone</h3>
+                                    <p class="contact-method-info">(41) 99999-9999</p>
+                                    <p class="contact-method-note">Segunda a Sexta, 9h às 18h</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon">💬</div>
+                                <div class="contact-details">
+                                    <h3 class="contact-method-title">Chat Online</h3>
+                                    <p class="contact-method-info">Suporte em tempo real</p>
+                                    <p class="contact-method-note">Segunda a Sexta, 9h às 18h</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulário de Contato -->
+                    <div class="contact-form-container">
+                        <h2 class="form-title">Envie sua Mensagem</h2>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">Nome *</label>
+                                    <input type="text" id="firstName" name="firstName" required class="form-input">
+                                    <span class="error-message" id="firstNameError"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Sobrenome *</label>
+                                    <input type="text" id="lastName" name="lastName" required class="form-input">
+                                    <span class="error-message" id="lastNameError"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required class="form-input">
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Telefone</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(11) 99999-9999" class="form-input">
+                                <span class="error-message" id="phoneError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Assunto *</label>
+                                <select id="subject" name="subject" required class="form-select">
+                                    <option value="">Selecione um assunto</option>
+                                    <option value="duvida">Dúvida Geral</option>
+                                    <option value="sugestao">Sugestão</option>
+                                    <option value="problema">Problema Técnico</option>
+                                    <option value="cadastro">Cadastro de Estabelecimento</option>
+                                    <option value="parceria">Parceria</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                                <span class="error-message" id="subjectError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Mensagem *</label>
+                                <textarea id="message" name="message" required class="form-textarea" 
+                                         placeholder="Descreva sua dúvida, sugestão ou feedback..."></textarea>
+                                <span class="error-message" id="messageError"></span>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter" class="form-checkbox">
+                                    <span class="checkmark"></span>
+                                    Quero receber novidades e dicas gastronômicas por email
+                                </label>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="terms" name="terms" required class="form-checkbox">
+                                    <span class="checkmark"></span>
+                                    Concordo com os termos de uso e política de privacidade *
+                                </label>
+                                <span class="error-message" id="termsError"></span>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn-primary btn-large">
+                                    <span class="btn-text">Enviar Mensagem</span>
+                                    <span class="btn-loading">Enviando...</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Como posso cadastrar meu restaurante no SaborLocal?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Para cadastrar seu estabelecimento, entre em contato conosco através do 
+                                formulário selecionando "Cadastro de Estabelecimento" como assunto. 
+                                Nossa equipe irá entrar em contato para orientar todo o processo de cadastro.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Posso editar ou excluir minhas avaliações?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Sim! Você pode editar ou excluir suas avaliações a qualquer momento 
+                                através da página "Minhas Avaliações". Basta clicar nos botões de 
+                                editar ou excluir ao lado de cada avaliação.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Como funciona o sistema de localização?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Você pode buscar estabelecimentos por cidade, bairro ou usar sua 
+                                localização atual. Também é possível avaliar qualquer estabelecimento 
+                                independente de onde você está, basta buscar pelo nome ou localização do lugar.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>O SaborLocal é gratuito?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Sim! O SaborLocal é completamente gratuito para usuários. Você pode 
+                                buscar, avaliar e descobrir novos estabelecimentos sem nenhum custo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Como posso reportar uma avaliação inadequada?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Se você encontrar uma avaliação que viola nossas diretrizes, entre em 
+                                contato conosco através do formulário selecionando "Problema Técnico" 
+                                como assunto e descreva a situação. Analisaremos o caso rapidamente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Sucesso -->
+    <div id="successModal" class="modal">
+        <div class="modal-content small">
+            <div class="modal-body text-center">
+                <div class="success-icon">✅</div>
+                <h3 class="success-title">Mensagem Enviada!</h3>
+                <p class="success-message">
+                    Obrigado pelo seu contato. Recebemos sua mensagem e 
+                    responderemos em breve.
+                </p>
+                <button class="btn-primary" onclick="closeSuccessModal()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">🍽️ Guia do Garfo</h3>
+                    <p class="footer-description">
+                        Conectando pessoas aos melhores sabores da cidade.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="explorar.html">Explorar</a></li>
+                        <li><a href="avaliacoes.html">Minhas Avaliações</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Contato</h4>
+                    <p>📧 estudoengsofware@gmail.com</p>
+                    <p>📱 (41) 99999-9999</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Guia do Garfo. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
+

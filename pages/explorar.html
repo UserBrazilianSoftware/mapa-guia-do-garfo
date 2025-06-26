@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore restaurantes e cafés - SaborLocal. Encontre os melhores estabelecimentos com filtros avançados, fotos e avaliações detalhadas.">
+    <meta name="keywords" content="explorar restaurantes, buscar cafés, filtros, avaliações, fotos, localização">
+    <meta name="author" content="SaborLocal">
+    <title>Explorar - Guia do Garfo</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="../index.html" class="nav-logo">
+                    🍽️ Guia do Garfo
+                </a>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="explorar.html" class="nav-link active">Explorar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="avaliacoes.html" class="nav-link">Minhas Avaliações</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contato.html" class="nav-link">Contato</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">Explorar Restaurantes e Cafés</h1>
+                <p class="page-subtitle">Descubra os melhores sabores em qualquer lugar</p>
+            </div>
+        </section>
+
+        <!-- Filtros e Busca -->
+        <section class="search-filters">
+            <div class="container">
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar por nome do estabelecimento..." class="search-input-full">
+                    <button class="search-btn">🔍 Buscar</button>
+                </div>
+                
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="location-filter">Localização:</label>
+                        <select id="location-filter" class="filter-select">
+                            <option value="">Todas as cidades</option>
+                            <option value="sao-paulo">São Paulo</option>
+                            <option value="rio-janeiro">Rio de Janeiro</option>
+                            <option value="belo-horizonte">Belo Horizonte</option>
+                            <option value="salvador">Salvador</option>
+                            <option value="brasilia">Brasília</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="type-filter">Tipo:</label>
+                        <select id="type-filter" class="filter-select">
+                            <option value="">Todos os tipos</option>
+                            <option value="restaurante">Restaurantes</option>
+                            <option value="cafe">Cafés</option>
+                            <option value="lanchonete">Lanchonetes</option>
+                            <option value="pizzaria">Pizzarias</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="rating-filter">Avaliação:</label>
+                        <select id="rating-filter" class="filter-select">
+                            <option value="">Todas as avaliações</option>
+                            <option value="5">⭐⭐⭐⭐⭐ (5 estrelas)</option>
+                            <option value="4">⭐⭐⭐⭐ (4+ estrelas)</option>
+                            <option value="3">⭐⭐⭐ (3+ estrelas)</option>
+                        </select>
+                    </div>
+                    
+                    <button class="clear-filters">Limpar Filtros</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resultados -->
+        <section class="results">
+            <div class="container">
+                <div class="results-header">
+                    <h2 class="results-title">Resultados da Busca</h2>
+                    <p class="results-count">Mostrando 12 de 47 estabelecimentos</p>
+                </div>
+                
+                <div class="places-grid">
+                    <!-- Restaurante 1 -->
+                    <article class="place-card detailed">
+                        <div class="place-image">
+                            <div class="place-type">🍽️ Restaurante</div>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <div class="place-content">
+                            <h3 class="place-name">Restaurante Bella Vista</h3>
+                            <p class="place-address">📍 Rua Augusta, 123 - Centro, São Paulo</p>
+                            <div class="place-rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating-text">4.8 (127 avaliações)</span>
+                            </div>
+                            <p class="place-description">
+                                Culinária italiana autêntica com vista panorâmica da cidade. 
+                                Ambiente elegante e pratos tradicionais.
+                            </p>
+                            <div class="place-photos">
+                                <div class="photo-preview">📸 Ver 15 fotos</div>
+                            </div>
+                            <div class="place-actions">
+                                <button class="btn-secondary" onclick="openMap('Restaurante Bella Vista', 'Rua Augusta, 123, São Paulo')">Ver no Mapa</button>
+                                <button class="btn-primary" onclick="openReviewModal('Restaurante Bella Vista')">Avaliar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Café 1 -->
+                    <article class="place-card detailed">
+                        <div class="place-image">
+                            <div class="place-type">☕ Café</div>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <div class="place-content">
+                            <h3 class="place-name">Café Aroma</h3>
+                            <p class="place-address">📍 Rua Harmonia, 456 - Vila Madalena, São Paulo</p>
+                            <div class="place-rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating-text">4.9 (89 avaliações)</span>
+                            </div>
+                            <p class="place-description">
+                                Café especial e ambiente aconchegante para trabalhar. 
+                                Wi-Fi gratuito e tomadas em todas as mesas.
+                            </p>
+                            <div class="place-photos">
+                                <div class="photo-preview">📸 Ver 23 fotos</div>
+                            </div>
+                            <div class="place-actions">
+                                <button class="btn-secondary" onclick="openMap('Café Aroma', 'Rua Harmonia, 456, Vila Madalena, São Paulo')">Ver no Mapa</button>
+                                <button class="btn-primary" onclick="openReviewModal('Café Aroma')">Avaliar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Lanchonete 1 -->
+                    <article class="place-card detailed">
+                        <div class="place-image">
+                            <div class="place-type">🍔 Lanchonete</div>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <div class="place-content">
+                            <h3 class="place-name">Burger House</h3>
+                            <p class="place-address">📍 Av. Atlântica, 789 - Copacabana, Rio de Janeiro</p>
+                            <div class="place-rating">
+                                <span class="stars">⭐⭐⭐⭐</span>
+                                <span class="rating-text">4.7 (203 avaliações)</span>
+                            </div>
+                            <p class="place-description">
+                                Os melhores hambúrgueres artesanais da zona sul. 
+                                Ingredientes frescos e molhos especiais da casa.
+                            </p>
+                            <div class="place-photos">
+                                <div class="photo-preview">📸 Ver 31 fotos</div>
+                            </div>
+                            <div class="place-actions">
+                                <button class="btn-secondary" onclick="openMap('Burger House', 'Av. Atlântica, 789, Copacabana, Rio de Janeiro')">Ver no Mapa</button>
+                                <button class="btn-primary" onclick="openReviewModal('Burger House')">Avaliar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Pizzaria 1 -->
+                    <article class="place-card detailed">
+                        <div class="place-image">
+                            <div class="place-type">🍕 Pizzaria</div>
+                            <button class="favorite-btn">♡</button>
+                        </div>
+                        <div class="place-content">
+                            <h3 class="place-name">Pizzaria Nonna</h3>
+                            <p class="place-address">📍 Rua das Flores, 321 - Savassi, Belo Horizonte</p>
+                            <div class="place-rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating-text">4.6 (156 avaliações)</span>
+                            </div>
+                            <p class="place-description">
+                                Pizza napolitana tradicional com forno a lenha. 
+                                Massa fermentada por 48 horas e ingredientes importados.
+                            </p>
+                            <div class="place-photos">
+                                <div class="photo-preview">📸 Ver 18 fotos</div>
+                            </div>
+                            <div class="place-actions">
+                                <button class="btn-secondary" onclick="openMap('Pizzaria Nonna', 'Rua das Flores, 321, Savassi, Belo Horizonte')">Ver no Mapa</button>
+                                <button class="btn-primary" onclick="openReviewModal('Pizzaria Nonna')">Avaliar</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Paginação -->
+                <div class="pagination">
+                    <button class="pagination-btn" disabled>← Anterior</button>
+                    <div class="pagination-numbers">
+                        <button class="pagination-number active">1</button>
+                        <button class="pagination-number">2</button>
+                        <button class="pagination-number">3</button>
+                        <button class="pagination-number">4</button>
+                    </div>
+                    <button class="pagination-btn">Próximo →</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Avaliação -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Avaliar Estabelecimento</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="reviewForm" class="review-form">
+                    <div class="form-group">
+                        <label>Estabelecimento:</label>
+                        <input type="text" id="establishmentName" readonly class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Sua Avaliação:</label>
+                        <div class="star-rating">
+                            <span class="star" data-rating="1">⭐</span>
+                            <span class="star" data-rating="2">⭐</span>
+                            <span class="star" data-rating="3">⭐</span>
+                            <span class="star" data-rating="4">⭐</span>
+                            <span class="star" data-rating="5">⭐</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reviewComment">Comentário:</label>
+                        <textarea id="reviewComment" class="form-textarea" placeholder="Conte sobre sua experiência..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reviewPhotos">Adicionar Fotos:</label>
+                        <input type="file" id="reviewPhotos" multiple accept="image/*" class="form-file">
+                        <div class="file-info">Você pode adicionar até 5 fotos</div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="closeReviewModal()">Cancelar</button>
+                        <button type="submit" class="btn-primary">Enviar Avaliação</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal do Mapa -->
+    <div id="mapModal" class="modal">
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h3 class="modal-title">Localização</h3>
+                <button class="modal-close" onclick="closeMapModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="map-container">
+                    <div id="map" class="map-placeholder">
+                        <div class="map-info">
+                            <h4 id="mapPlaceName">Nome do Estabelecimento</h4>
+                            <p id="mapPlaceAddress">Endereço completo</p>
+                            <button class="btn-primary" onclick="openGoogleMaps()">Abrir no Google Maps</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">🍽️ Guia do Garfo</h3>
+                    <p class="footer-description">
+                        Conectando pessoas aos melhores sabores da cidade.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="explorar.html">Explorar</a></li>
+                        <li><a href="avaliacoes.html">Minhas Avaliações</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Contato</h4>
+                    <p>📧 estudoengsofware@gmail.com</p>
+                    <p>📱 (41) 99999-9999</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Guia do Garfo. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
+

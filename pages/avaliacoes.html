@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Minhas Avaliações - SaborLocal. Gerencie suas avaliações de restaurantes e cafés, veja estatísticas e conquistas.">
+    <meta name="keywords" content="minhas avaliações, gerenciar reviews, estatísticas, conquistas, histórico">
+    <meta name="author" content="SaborLocal">
+    <title>Minhas Avaliações - Guia do Garfo</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="../index.html" class="nav-logo">
+                    🍽️ Guia do Garfo
+                </a>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="explorar.html" class="nav-link">Explorar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="avaliacoes.html" class="nav-link active">Minhas Avaliações</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contato.html" class="nav-link">Contato</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">Minhas Avaliações</h1>
+                <p class="page-subtitle">Gerencie suas experiências gastronômicas</p>
+            </div>
+        </section>
+
+        <!-- Estatísticas Pessoais -->
+        <section class="personal-stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📝</div>
+                        <div class="stat-number">23</div>
+                        <div class="stat-label">Avaliações Feitas</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-number">4.2</div>
+                        <div class="stat-label">Média das Suas Avaliações</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📸</div>
+                        <div class="stat-number">67</div>
+                        <div class="stat-label">Fotos Compartilhadas</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">👍</div>
+                        <div class="stat-number">156</div>
+                        <div class="stat-label">Curtidas Recebidas</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conquistas -->
+        <section class="achievements">
+            <div class="container">
+                <h2 class="section-title">Suas Conquistas</h2>
+                <div class="achievements-grid">
+                    <div class="achievement earned">
+                        <div class="achievement-icon">🏆</div>
+                        <div class="achievement-content">
+                            <h3 class="achievement-title">Primeira Avaliação</h3>
+                            <p class="achievement-description">Fez sua primeira avaliação no SaborLocal</p>
+                        </div>
+                    </div>
+                    <div class="achievement earned">
+                        <div class="achievement-icon">📸</div>
+                        <div class="achievement-content">
+                            <h3 class="achievement-title">Fotógrafo Gastronômico</h3>
+                            <p class="achievement-description">Compartilhou 50+ fotos de pratos</p>
+                        </div>
+                    </div>
+                    <div class="achievement earned">
+                        <div class="achievement-icon">⭐</div>
+                        <div class="achievement-content">
+                            <h3 class="achievement-title">Avaliador Ativo</h3>
+                            <p class="achievement-description">Fez 20+ avaliações</p>
+                        </div>
+                    </div>
+                    <div class="achievement locked">
+                        <div class="achievement-icon">🌟</div>
+                        <div class="achievement-content">
+                            <h3 class="achievement-title">Expert Local</h3>
+                            <p class="achievement-description">Avalie 50 estabelecimentos para desbloquear</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filtros das Avaliações -->
+        <section class="reviews-filters">
+            <div class="container">
+                <div class="filters-bar">
+                    <div class="filter-group">
+                        <label for="sort-reviews">Ordenar por:</label>
+                        <select id="sort-reviews" class="filter-select">
+                            <option value="recent">Mais Recentes</option>
+                            <option value="oldest">Mais Antigas</option>
+                            <option value="rating-high">Maior Avaliação</option>
+                            <option value="rating-low">Menor Avaliação</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="filter-type">Tipo:</label>
+                        <select id="filter-type" class="filter-select">
+                            <option value="">Todos</option>
+                            <option value="restaurante">Restaurantes</option>
+                            <option value="cafe">Cafés</option>
+                            <option value="lanchonete">Lanchonetes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lista de Avaliações -->
+        <section class="my-reviews">
+            <div class="container">
+                <h2 class="section-title">Suas Avaliações</h2>
+                
+                <div class="reviews-list">
+                    <!-- Avaliação 1 -->
+                    <article class="review-item">
+                        <div class="review-header">
+                            <div class="review-place">
+                                <h3 class="place-name">Restaurante Bella Vista</h3>
+                                <p class="place-location">📍 Centro, São Paulo</p>
+                            </div>
+                            <div class="review-rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating-number">5.0</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">
+                                Experiência incrível! A vista da cidade é deslumbrante e a comida italiana é autêntica. 
+                                O risotto de camarão estava perfeito e o atendimento foi impecável. 
+                                Definitivamente voltarei para experimentar outros pratos.
+                            </p>
+                            <div class="review-photos">
+                                <div class="photo-thumbnail">📸</div>
+                                <div class="photo-thumbnail">📸</div>
+                                <div class="photo-thumbnail">📸</div>
+                                <span class="photo-count">+2 fotos</span>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <div class="review-date">Avaliado em 15 de junho de 2025</div>
+                            <div class="review-actions">
+                                <button class="btn-text" onclick="editReview(1)">✏️ Editar</button>
+                                <button class="btn-text" onclick="deleteReview(1)">🗑️ Excluir</button>
+                            </div>
+                        </div>
+                        <div class="review-stats">
+                            <span class="stat">👍 12 curtidas</span>
+                            <span class="stat">💬 3 comentários</span>
+                        </div>
+                    </article>
+
+                    <!-- Avaliação 2 -->
+                    <article class="review-item">
+                        <div class="review-header">
+                            <div class="review-place">
+                                <h3 class="place-name">Café Aroma</h3>
+                                <p class="place-location">📍 Vila Madalena, São Paulo</p>
+                            </div>
+                            <div class="review-rating">
+                                <span class="stars">⭐⭐⭐⭐</span>
+                                <span class="rating-number">4.0</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">
+                                Ótimo lugar para trabalhar! Wi-Fi rápido, ambiente aconchegante e o café é realmente especial. 
+                                O cappuccino estava cremoso e saboroso. Único ponto negativo é que fica um pouco barulhento 
+                                nos fins de semana.
+                            </p>
+                            <div class="review-photos">
+                                <div class="photo-thumbnail">📸</div>
+                                <div class="photo-thumbnail">📸</div>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <div class="review-date">Avaliado em 10 de junho de 2025</div>
+                            <div class="review-actions">
+                                <button class="btn-text" onclick="editReview(2)">✏️ Editar</button>
+                                <button class="btn-text" onclick="deleteReview(2)">🗑️ Excluir</button>
+                            </div>
+                        </div>
+                        <div class="review-stats">
+                            <span class="stat">👍 8 curtidas</span>
+                            <span class="stat">💬 1 comentário</span>
+                        </div>
+                    </article>
+
+                    <!-- Avaliação 3 -->
+                    <article class="review-item">
+                        <div class="review-header">
+                            <div class="review-place">
+                                <h3 class="place-name">Burger House</h3>
+                                <p class="place-location">📍 Copacabana, Rio de Janeiro</p>
+                            </div>
+                            <div class="review-rating">
+                                <span class="stars">⭐⭐⭐</span>
+                                <span class="rating-number">3.0</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">
+                                Hambúrguer saboroso, mas o atendimento deixou a desejar. Demorou mais de 30 minutos 
+                                para chegar o pedido e o ambiente estava muito quente. O sabor compensa, mas a 
+                                experiência geral poderia ser melhor.
+                            </p>
+                            <div class="review-photos">
+                                <div class="photo-thumbnail">📸</div>
+                            </div>
+                        </div>
+                        <div class="review-footer">
+                            <div class="review-date">Avaliado em 5 de junho de 2025</div>
+                            <div class="review-actions">
+                                <button class="btn-text" onclick="editReview(3)">✏️ Editar</button>
+                                <button class="btn-text" onclick="deleteReview(3)">🗑️ Excluir</button>
+                            </div>
+                        </div>
+                        <div class="review-stats">
+                            <span class="stat">👍 5 curtidas</span>
+                            <span class="stat">💬 2 comentários</span>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Paginação -->
+                <div class="pagination">
+                    <button class="pagination-btn" disabled>← Anterior</button>
+                    <div class="pagination-numbers">
+                        <button class="pagination-number active">1</button>
+                        <button class="pagination-number">2</button>
+                        <button class="pagination-number">3</button>
+                    </div>
+                    <button class="pagination-btn">Próximo →</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Edição de Avaliação -->
+    <div id="editReviewModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Editar Avaliação</h3>
+                <button class="modal-close" onclick="closeEditModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="editReviewForm" class="review-form">
+                    <div class="form-group">
+                        <label>Estabelecimento:</label>
+                        <input type="text" id="editEstablishmentName" readonly class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Sua Avaliação:</label>
+                        <div class="star-rating" id="editStarRating">
+                            <span class="star" data-rating="1">⭐</span>
+                            <span class="star" data-rating="2">⭐</span>
+                            <span class="star" data-rating="3">⭐</span>
+                            <span class="star" data-rating="4">⭐</span>
+                            <span class="star" data-rating="5">⭐</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="editReviewComment">Comentário:</label>
+                        <textarea id="editReviewComment" class="form-textarea"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="closeEditModal()">Cancelar</button>
+                        <button type="submit" class="btn-primary">Salvar Alterações</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">🍽️ Guia do Garfo</h3>
+                    <p class="footer-description">
+                        Conectando pessoas aos melhores sabores da cidade.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="explorar.html">Explorar</a></li>
+                        <li><a href="avaliacoes.html">Minhas Avaliações</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Contato</h4>
+                    <p>📧 estudoengsofware@gmail.com</p>
+                    <p>📱 (41) 99999-9999</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Guia do Garfo. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
+
